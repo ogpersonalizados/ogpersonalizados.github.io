@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/</loc>
+  </url>
+
+  <!-- Canecas -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/canecas/caneca-branca.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/canecas/caneca-colorida.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/canecas/caneca-magica.html</loc>
+  </url>
+
+  <!-- Térmicos -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/térmicos/copo-termico.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/térmicos/garrafa-termica.html</loc>
+  </url>
+
+  <!-- Kits -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/kits-especiais/kit-churrasco.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/kits-especiais/porta-joias-elegance.html</loc>
+  </url>
+
+  <!-- Camisetas -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/camisetas/camiseta-algodão.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/camisetas/camiseta-poliester.html</loc>
+  </url>
+
+  <!-- Almofadas -->
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/almofadas/almofada-branca.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.ogcriativo.com.br/produtos-html/almofadas/almofada-mágica.html</loc>
+  </url>
+
+</urlset>
