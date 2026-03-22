@@ -44,7 +44,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.99);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: space-between;
