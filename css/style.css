@@ -81,7 +81,7 @@ nav ul li a:hover {
 .carousel {
   margin-top: 80px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   aspect-ratio: 1920 / 600;
 }
@@ -134,7 +134,7 @@ nav ul li a:hover {
 
 .carousel-indicators{
   position:absolute;
-  bottom:35px;
+  bottom:-30px;
   left:50%;
   transform:translateX(-50%);
   display:flex;
@@ -181,6 +181,41 @@ nav ul li a:hover {
   background:#ffd95a;
   transform:translateY(-3px);
   box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* BOTÃO BANNER DATA */
+.banner-data-btn {
+  background: #e91e63;
+  color: #fff;
+}
+
+/* BOTÃO BANNER DATA COM ANIMAÇÃO */
+.banner-data-btn {
+  background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* EFEITO HOVER (quando passa o mouse) */
+.banner-data-btn:hover {
+  transform: translateY(-3px); /* sobe levemente */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* sombra suave */
+}
+
+/* EFEITO AO CLICAR */
+.banner-data-btn:active {
+  transform: scale(0.97); /* leve "pressionado" */
+}
+
+.banner-data-btn:hover {
+  background: linear-gradient(45deg, #ff4d6d, #ff8fa3) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.banner-data-btn {
+  display: none;
 }
 
 
@@ -602,7 +637,7 @@ footer {
   }
 
   .carousel-indicators{
-  bottom:18px;
+  bottom:-20px;
 }
 
   .slide img{

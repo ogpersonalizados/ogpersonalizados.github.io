@@ -51,6 +51,23 @@ filterProducts('todos');
 
 document.addEventListener("DOMContentLoaded", function(){
 
+  /* CONTROLAR BOTÃO DE BANNERS DE CAMPANHA */
+
+function controlarBotaoBannerData() {
+  const slideAtivo = document.querySelector(".slide.active");
+  const botao = document.querySelector(".banner-data-btn");
+
+  if (!slideAtivo || !botao) return;
+
+  if (slideAtivo.classList.contains("banner-data")) {
+    botao.style.display = "inline-block";
+  } else {
+    botao.style.display = "none";
+  }
+}
+
+
+
 /* seleciona todos os slides e indicadores */
 const slides = document.querySelectorAll(".slide");
 const indicators = document.querySelectorAll(".indicator");
@@ -82,6 +99,8 @@ function showSlide(index){
 
   /* atualiza o slide atual */
   currentSlide = index;
+
+  controlarBotaoBannerData(); // 👈 aqui
 
 }
 
@@ -127,13 +146,11 @@ function stopCarousel(){
    CLIQUE NAS BOLINHAS (INDICADORES)
 ====================================================== */
 
-indicators.forEach((indicator)=>{
+indicators.forEach((indicator, index) => {
 
   indicator.addEventListener("click", function(){
 
-    const slideIndex = parseInt(this.getAttribute("data-slide"));
-
-    showSlide(slideIndex);
+    showSlide(index);
 
   });
 
@@ -153,6 +170,8 @@ carousel.addEventListener("mouseleave", startCarousel);
 startCarousel();
 
 });
+
+
 
 
 
