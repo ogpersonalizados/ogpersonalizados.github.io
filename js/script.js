@@ -47,127 +47,134 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
 // exibe tudo ao carregar
 filterProducts('todos');
 
-/* === 4. CARROSSEL DE BANNERS ========================================= */
+/* ======================================================
+   4. CARROSSEL DE BANNERS
+====================================================== */
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* CONTROLAR BOTÃO DE BANNERS DE CAMPANHA */
+  /* ======================================================
+     CONTROLE DO BOTÃO DE BANNER DE CAMPANHA
+  ====================================================== */
+  function controlarBotaoBannerData() {
+    const slideAtivo = document.querySelector(".slide.active");
+    const botao = document.querySelector(".banner-data-btn");
 
-function controlarBotaoBannerData() {
-  const slideAtivo = document.querySelector(".slide.active");
-  const botao = document.querySelector(".banner-data-btn");
+    if (!slideAtivo || !botao) return;
 
-  if (!slideAtivo || !botao) return;
-
-  if (slideAtivo.classList.contains("banner-data")) {
-    botao.style.display = "inline-block";
-  } else {
-    botao.style.display = "none";
-  }
-}
-
-
-
-/* seleciona todos os slides e indicadores */
-const slides = document.querySelectorAll(".slide");
-const indicators = document.querySelectorAll(".indicator");
-const carousel = document.querySelector(".carousel");
-
-/* slide atual */
-let currentSlide = 0;
-
-/* variável que controla o autoplay */
-let autoPlay;
-
-
-/* ======================================================
-   FUNÇÃO PARA MOSTRAR UM SLIDE ESPECÍFICO
-====================================================== */
-function showSlide(index){
-
-  slides.forEach((slide,i)=>{
-
-    /* remove o ativo de todos */
-    slide.classList.remove("active");
-    indicators[i].classList.remove("active");
-
-  });
-
-  /* ativa o slide correto */
-  slides[index].classList.add("active");
-  indicators[index].classList.add("active");
-
-  /* atualiza o slide atual */
-  currentSlide = index;
-
-  controlarBotaoBannerData(); // 👈 aqui
-
-}
-
-
-/* ======================================================
-   FUNÇÃO PARA AVANÇAR PARA O PRÓXIMO SLIDE
-====================================================== */
-function nextSlide(){
-
-  let next = currentSlide + 1;
-
-  /* se chegar no último, volta para o primeiro */
-  if(next >= slides.length){
-    next = 0;
+    if (slideAtivo.classList.contains("banner-data")) {
+      botao.style.display = "inline-block";
+    } else {
+      botao.style.display = "none";
+    }
   }
 
-  showSlide(next);
 
-}
-
-
-/* ======================================================
-   INICIAR AUTOPLAY
-====================================================== */
-function startCarousel(){
-
-  autoPlay = setInterval(nextSlide, 5000); // muda a cada 5 segundos
-
-}
+  /* ======================================================
+     SELEÇÃO DE ELEMENTOS
+  ====================================================== */
+  const slides = document.querySelectorAll(".slide");
+  const indicators = document.querySelectorAll(".indicator");
+  const carousel = document.querySelector(".carousel");
 
 
-/* ======================================================
-   PARAR AUTOPLAY (quando passar o mouse)
-====================================================== */
-function stopCarousel(){
-
-  clearInterval(autoPlay);
-
-}
+  /* ======================================================
+     VARIÁVEIS DE CONTROLE
+  ====================================================== */
+  let currentSlide = 0;
+  let autoPlay;
 
 
-/* ======================================================
-   CLIQUE NAS BOLINHAS (INDICADORES)
-====================================================== */
+  /* ======================================================
+     INICIALIZAÇÃO DO CARROSSEL (🔥 CORREÇÃO PRINCIPAL)
+  ====================================================== */
+  function initCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove("active");
+      indicators[index].classList.remove("active");
+    });
 
-indicators.forEach((indicator, index) => {
+    slides[0].classList.add("active");
+    indicators[0].classList.add("active");
 
-  indicator.addEventListener("click", function(){
+    currentSlide = 0;
 
-    showSlide(index);
+    controlarBotaoBannerData(); // garante botão correto no load
+  }
 
+
+  /* ======================================================
+     MOSTRAR UM SLIDE ESPECÍFICO
+  ====================================================== */
+  function showSlide(index){
+
+    slides.forEach((slide,i)=>{
+      slide.classList.remove("active");
+      indicators[i].classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    indicators[index].classList.add("active");
+
+    currentSlide = index;
+
+    controlarBotaoBannerData();
+  }
+
+
+  /* ======================================================
+     PRÓXIMO SLIDE
+  ====================================================== */
+  function nextSlide(){
+
+    let next = currentSlide + 1;
+
+    if(next >= slides.length){
+      next = 0;
+    }
+
+    showSlide(next);
+  }
+
+
+  /* ======================================================
+     INICIAR AUTOPLAY
+  ====================================================== */
+  function startCarousel(){
+    autoPlay = setInterval(nextSlide, 5000);
+  }
+
+
+  /* ======================================================
+     PARAR AUTOPLAY
+  ====================================================== */
+  function stopCarousel(){
+    clearInterval(autoPlay);
+  }
+
+
+  /* ======================================================
+     CLIQUE NOS INDICADORES
+  ====================================================== */
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", function(){
+      showSlide(index);
+    });
   });
 
-});
+
+  /* ======================================================
+     PAUSAR AO PASSAR O MOUSE
+  ====================================================== */
+  carousel.addEventListener("mouseenter", stopCarousel);
+  carousel.addEventListener("mouseleave", startCarousel);
 
 
-/* ======================================================
-   PAUSAR CARROSSEL AO PASSAR O MOUSE
-====================================================== */
-
-carousel.addEventListener("mouseenter", stopCarousel);
-carousel.addEventListener("mouseleave", startCarousel);
-
-
-/* inicia o carrossel automaticamente */
-
-startCarousel();
+  /* ======================================================
+     INICIALIZAÇÃO FINAL (ORDEM CORRETA)
+  ====================================================== */
+  initCarousel();   // 🔥 resolve seu problema
+  startCarousel();  // inicia depois de tudo pronto
 
 });
 
