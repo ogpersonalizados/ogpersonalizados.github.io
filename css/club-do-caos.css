@@ -1,0 +1,778 @@
+/* =====================================================
+   CLUB DO CAOS - OG CRIATIVO
+   Desenvolvido para OG Criativo
+=====================================================*/
+
+/* ===========================
+RESET
+===========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+/* ===========================
+SCROLLBAR
+===========================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d4af37;
+    border-radius:20px;
+}
+
+/* ===========================
+HEADER
+===========================*/
+
+header{
+
+    position:sticky;
+    top:0;
+
+    width:100%;
+
+    background:rgba(0,0,0,.92);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    z-index:999;
+
+}
+
+.logo img{
+
+    height:70px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#d4af37;
+
+}
+
+/* ===========================
+HERO
+===========================*/
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+
+    url("/assets/banners/banner-hero-club-caos.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-content{
+
+    max-width:820px;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border:1px solid #d4af37;
+
+    border-radius:30px;
+
+    color:#d4af37;
+
+    margin-bottom:25px;
+
+    font-size:.95rem;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+}
+
+.hero p{
+
+    font-size:1.3rem;
+
+    color:#d9d9d9;
+
+    margin-bottom:40px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#d4af37;
+
+    color:#000;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
+
+}
+
+/* ===========================
+SECTIONS
+===========================*/
+
+section{
+
+    padding:90px 8%;
+
+}
+
+section h2{
+
+    font-size:2.8rem;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#d4af37;
+
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:#bbb;
+
+    margin-bottom:60px;
+
+}
+
+/* ===========================
+MANIFESTO
+===========================*/
+
+.manifesto{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.manifesto p{
+
+    margin-top:20px;
+
+    font-size:1.1rem;
+
+    color:#d4d4d4;
+
+}
+
+/* ===========================
+NÍVEL DO CAOS
+===========================*/
+
+.nivel-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.nivel-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    transition:.35s;
+
+}
+
+.nivel-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d4af37;
+
+}
+
+.nivel-card h3{
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.nivel-card p{
+
+    color:#ccc;
+
+}
+
+.nivel-caos{
+
+    padding:80px 20px;
+
+    background:#111;
+
+    text-align:center;
+
+}
+
+.nivel-caos h2{
+
+    color:#d4af37;
+
+    margin-bottom:10px;
+
+}
+
+.subtitulo{
+
+    color:#ccc;
+
+    margin-bottom:40px;
+
+}
+
+.quiz{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#1b1b1b;
+
+    border-radius:15px;
+
+    padding:40px;
+
+}
+
+.pergunta{
+
+    margin-bottom:30px;
+
+    text-align:left;
+
+}
+
+.pergunta p{
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+
+}
+
+.pergunta label{
+
+    display:block;
+
+    color:#ddd;
+
+    margin:8px 0;
+
+    cursor:pointer;
+
+}
+
+#btnResultado{
+
+    background:#d4af37;
+
+    color:#000;
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+#btnResultado:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#resultadoCaos{
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#d4af37;
+
+    line-height:1.6;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+/* ===========================
+CARDS
+===========================*/
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:#111;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:contain;
+
+    background:#f7f7f7;
+
+}
+
+.selo{
+
+    position:absolute;
+
+    margin:18px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.card h3{
+
+    margin:25px 25px 10px;
+
+    color:#fff;
+
+}
+
+.card p{
+
+    margin:0 25px;
+
+    color:#bdbdbd;
+
+    flex-grow:1;
+
+}
+
+.preco{
+
+    margin:25px;
+
+    font-size:1.6rem;
+
+    color:#d4af37;
+
+    font-weight:700;
+
+}
+
+.card a{
+
+    margin:0 25px 25px;
+
+    text-align:center;
+
+    background:#d4af37;
+
+    color:#000;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.card a:hover{
+
+    background:#fff;
+
+}
+
+/* ===========================
+VANTAGENS
+===========================*/
+
+.vantagens{
+
+    background:#090909;
+
+}
+
+.vantagens-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.vantagens-grid div{
+
+    background:#111;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+.vantagens-grid h3{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.vantagens-grid p{
+
+    color:#ddd;
+
+}
+
+/* FRASE DA CANECA */
+
+.frase{
+    font-size:1.05rem;
+    font-weight:700;
+    color:#222;
+    text-align:center;
+    margin:18px 20px 10px;
+    line-height:1.6;
+}
+
+.descricao{
+    font-size:0.92rem;
+    color:#777;
+    font-style:italic;
+    text-align:center;
+    margin:0 20px 18px;
+    line-height:1.6;
+}
+
+/* ===========================
+CTA
+===========================*/
+
+.cta{
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#d4af37,#b89022);
+
+    color:#000;
+
+}
+
+.cta h2{
+
+    color:#000;
+
+}
+
+.cta p{
+
+    margin-bottom:35px;
+
+}
+
+.btn-whatsapp{
+
+    display:inline-block;
+
+    background:#25D366;
+
+    color:#fff;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-whatsapp:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+FOOTER
+===========================*/
+
+footer{
+
+    padding:45px;
+
+    text-align:center;
+
+    background:#000;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer img{
+
+    height:70px;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#888;
+
+}
+
+/* ===========================
+WHATSAPP
+===========================*/
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.08);
+
+}
+
+.whatsapp-float img{
+
+    width:30px;
+
+}

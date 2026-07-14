@@ -373,3 +373,88 @@ function mostrarBanner() {
 }
 
 setInterval(mostrarBanner, 5000); // troca de banner a cada 5 segundos
+
+/* =====================================================
+   QUIZ CLUB DO CAOS
+===================================================== */
+
+document
+.getElementById("btnResultado")
+.addEventListener("click", function(){
+
+    let total = 0;
+
+    for(let i=1;i<=5;i++){
+
+        const resposta =
+        document.querySelector(`input[name="q${i}"]:checked`);
+
+        if(!resposta){
+
+            alert("Responda todas as perguntas.");
+
+            return;
+
+        }
+
+        total += Number(resposta.value);
+
+    }
+
+    let resultado = "";
+
+    if(total <= 7){
+
+        resultado =
+        `😊 Seu nível de Caos é BAIXO.
+
+Caneca indicada:
+
+"Paz interior? Em manutenção."`;
+
+    }
+
+    else if(total <= 11){
+
+        resultado =
+        `😅 Seu nível de Caos é MODERADO.
+
+Caneca indicada:
+
+"Minha personalidade é: 90% ironia!"`;
+
+    }
+
+    else{
+
+        const opcoes = [
+
+            "Um pé no CAPS e outro no Serasa.",
+
+            "Produzo melhor sob ameaça de boleto!",
+
+            "Gosto de ver o Caos!",
+
+            "Não sou grosso(a), você que é sensível.",
+
+            "O clima tá ótimo pra ficar quieto(a)."
+
+        ];
+
+        const aleatoria =
+        opcoes[Math.floor(Math.random()*opcoes.length)];
+
+        resultado =
+        `🔥 Seu nível de Caos é CRÍTICO.
+
+Sua caneca ideal é:
+
+"${aleatoria}"`;
+
+    }
+
+    document.getElementById("resultadoCaos").innerText = resultado;
+
+});
+
+

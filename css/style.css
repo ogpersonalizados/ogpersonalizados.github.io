@@ -169,7 +169,7 @@ nav ul li a:hover {
 
 .banner-btn{
   display:inline-block;
-  margin-top:15px;
+  margin-top:90px;
   padding:12px 28px;
   background:#f4c542;
   color:#000;
@@ -180,6 +180,25 @@ nav ul li a:hover {
 }
 
 .banner-btn:hover{
+  background:#ffd95a;
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* BOTÃO BANNER CLUB CAOS */
+.banner-club-btn{
+  display:inline-block;
+  margin-top:200px;
+  padding:12px 28px;
+  background:#f4c542;
+  color:#000;
+  font-weight:600;
+  border-radius:6px;
+  text-decoration:none;
+  transition:all 0.3s ease;
+}
+
+.banner-club-btn:hover{
   background:#ffd95a;
   transform:translateY(-3px);
   box-shadow:0 8px 20px rgba(0,0,0,0.25);
@@ -696,10 +715,4 @@ footer {
   }
 
 }
-
-
-
-
-
-
 
