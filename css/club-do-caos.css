@@ -776,3 +776,13 @@ WHATSAPP
     width:30px;
 
 }
+
+@media (max-width:768px){
+
+nav ul li a{
+
+    font-size:14px;
+
+}
+
+}
