@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dia das Mães | OG Criativo</title>
+<title>Dia dos Pais | OG Criativo</title>
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -17,7 +17,7 @@
   all: unset;
 }
 
-/* NAVBAR PRETA */
+/* NAVBAR */
 header.navbar-maes {
   all: unset;
   display: block;
@@ -28,6 +28,7 @@ header.navbar-maes {
   top: 0;
   background: #000;
   z-index: 1000;
+  border-bottom: 2px solid #d4af37;
 }
 
 .nav-container {
@@ -36,7 +37,7 @@ header.navbar-maes {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 20px;
+  padding: 8px 20px;
 }
 
 .nav-logo img {
@@ -47,11 +48,18 @@ header.navbar-maes {
 .btn-voltar {
   background: #d4af37;
   color: #000;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
+  font-weight: bold;
   text-decoration: none;
   line-height: 1;
+  transition: 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: #f0c64f;
+  transform: translateY(-2px);
 }
 
 body {
@@ -66,27 +74,48 @@ header:not(.navbar-maes) {
 .hero-maes {
   display: flex;
   justify-content: center;
-  background: #f5e8d8;
+  background: #111;
   padding: 20px 0;
 }
 
 .hero-maes img {
   width: 100%;
   max-width: 1920px;
+  display: block;
 }
 
-/* PARCERIA */
+/* MENSAGEM COMERCIAL */
 .parceria {
   background: #111;
   color: #fff;
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
+}
+
+.parceria h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.parceria p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 /* KITS */
 .kits {
   padding: 80px 20px;
   text-align: center;
+  background: #fafafa;
+}
+
+.kits h2 {
+  color: #111;
+  margin-bottom: 40px;
+  font-size: 2rem;
 }
 
 .grid {
@@ -102,20 +131,16 @@ header:not(.navbar-maes) {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.kit-card a {
-  margin: 15px;
-  margin-top: auto; /* 🔥 EMPURRA O BOTÃO PRA BAIXO */
+  border-top: 4px solid #d4af37;
 }
 
 .kit-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
 .kit-card img {
@@ -123,54 +148,85 @@ header:not(.navbar-maes) {
   height: 250px;
   object-fit: contain;
   background: #fff;
+  padding: 15px;
 }
 
 .kit-card h3 {
   padding: 15px;
-  color: #000;
+  color: #111;
+  font-size: 1.3rem;
 }
 
 .kit-card p {
   padding: 0 15px;
-  color: #555; /* 🔥 COR CORRIGIDA */
+  color: #555;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .preco {
   font-weight: bold;
-  color: #c06c84;
-  margin: 10px 15px;
-  font-size: 18px;
+  color: #d4af37;
+  margin: 15px;
+  font-size: 24px;
 }
 
 .kit-card a {
   display: block;
   margin: 15px;
+  margin-top: auto;
   padding: 12px;
-  background: #d98ca0;
-  color: white;
+  background: #d4af37;
+  color: #000;
   border-radius: 999px;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.kit-card a:hover {
+  background: #f0c64f;
+  transform: scale(1.03);
 }
 
 /* CONDIÇÕES */
 .condicoes {
-  background: #f7f3f4;
-  padding: 60px 20px;
+  background: #f5f5f5;
+  padding: 70px 20px;
+}
+
+.condicoes h2 {
+  text-align: center;
+  color: #111;
+  margin-bottom: 30px;
 }
 
 .condicoes ul {
   max-width: 700px;
   margin: auto;
   color: #444;
-  line-height: 1.6;
+  line-height: 2;
+  font-size: 16px;
+  list-style: none;
+  padding: 0;
 }
 
 /* CTA */
 .cta-final {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
+  background: #111;
+  color: #fff;
+}
+
+.cta-final h2 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.cta-final p {
+  margin-bottom: 30px;
 }
 
 .btn-primary {
@@ -182,12 +238,46 @@ header:not(.navbar-maes) {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
-   box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
 }
 
 .btn-primary:hover {
   background: #1ebe5d;
   transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 10px 15px;
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+
+  .btn-voltar {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .kits,
+  .parceria,
+  .condicoes,
+  .cta-final {
+    padding: 50px 15px;
+  }
+
+  .kits h2,
+  .parceria h2,
+  .cta-final h2 {
+    font-size: 1.7rem;
+  }
+
+  .preco {
+    font-size: 22px;
+  }
 }
 
 
@@ -208,139 +298,188 @@ header:not(.navbar-maes) {
     </a>
 
   </div>
-
+</div>
 
 <!-- HERO -->
 <section class="hero-maes">
-  <img src="/assets/banners/banner-hero-parceria.png" alt="Banner Dia das Mães">
+  <img src="/assets/banners/banner-hero-dia-dos-pais.png" alt="Banner Dia dos Pais">
 </section>
 
-<!-- PARCERIA -->
+<!-- MENSAGEM COMERCIAL -->
 <section class="parceria">
-  <h2>Uma parceria especial</h2>
+  <h2>Presentes que contam histórias</h2>
 
   <p>
-    Neste Dia das Mães, a OG Criativo se uniu à Jéssica Tozi Confeitaria para criar
-    presentes ainda mais únicos e personalizados.
+    Neste Dia dos Pais, a OG Criativo preparou uma seleção exclusiva de kits personalizados para homenagear quem sempre esteve ao seu lado.
   </p>
 
   <p style="margin-top:10px;">
-    Kits exclusivos com doces artesanais e canecas personalizadas,
-    tornando o presente ainda mais especial e inesquecível 💝
+    Mais do que presentes, são lembranças que emocionam, fortalecem vínculos e transformam momentos em memórias para toda a vida.
+  </p>
+
+  <p style="margin-top:10px;">
+    Escolha o kit ideal e surpreenda seu pai com algo único, criado especialmente para ele. 💛
   </p>
 </section>
 
 <!-- KITS -->
 <section class="kits">
-  <h2>Nossos Kits Especiais</h2>
+
+  <h2>Kits Exclusivos para o Dia dos Pais</h2>
 
   <div class="grid">
 
-    <!-- CESTA LUXO -->
+    <!-- KIT CHURRASCO -->
     <div class="kit-card">
-      <img src="/assets/img-produtos/kits-especiais/dia-das-maes/cesta-luxo-og.png">
-      <h3>Cesta Luxo ✨</h3>
 
-      <p>Bolo caseiro + calda em pote de vidro + flores artificiais + caneca personalizada</p>
-      <p>Embalagem em caixa de madeira</p>
+      <img src="/assets/img-produtos/kits-especiais/dia-dos-pais/kit-churrasco.png">
 
-      <p><strong>Sabores:</strong> Chocolate, Tradicional, Fubá, Limão, Laranja, Coco</p>
-      <p><strong>Caldas:</strong> Chocolate, Ninho, Goiabada, Limão, Laranja, Beijinho</p>
+      <h3>🔥 Kit Churrasco</h3>
 
-      <div class="preco">R$ 150,00</div>
+      <p>
+        O presente perfeito para o pai que transforma momentos em memórias.
+      </p>
 
-      <a href="https://wa.me/5535992660184" target="_blank">Fazer Pedido</a>
-    </div>
+      <p>
+        Kit com lâminas Tramontina em aço inox e tábua em madeira natural com acabamento refinado.
+      </p>
 
-    <!-- KIT AMOR QUE FICA -->
-    <div class="kit-card">
-      <img src="/assets/img-produtos/kits-especiais/dia-das-maes/kit-amor-que-fica.png">
+      <p>
+        Personalização exclusiva com nome, frase ou homenagem especial.
+      </p>
 
-      <h3>Kit Amor que Fica 💖</h3>
+      <div class="preco">R$ 239,00</div>
 
-      <p>Surpreenda sua mãe com um presente que vai além do momento.</p>
-
-      <p>Este kit foi pensado para emocionar e permanecer no dia a dia,
-      trazendo lembranças especiais sempre por perto.</p>
-
-      <p><strong>Inclui:</strong></p>
-      <p>• Caneca personalizada com foto, nome ou mensagem</p>
-      <p>• Porta-joias elegante</p>
-      <p>• Buquê de flores decorativas</p>
-      <p>• Embalagem especial pronta para presentear</p>
-
-      <p>💝 Um presente único, delicado e cheio de significado</p>
-
-      <div class="preco">R$ 130,00</div>
-
-      <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse no Kit Amor que Fica 💖" target="_blank">
+      <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse no Kit Churrasco 🔥" target="_blank">
         Fazer Pedido
       </a>
+
     </div>
 
-    <!-- CESTA AMOR -->
+    <!-- KIT PAI RAIZ -->
     <div class="kit-card">
-      <img src="/assets/img-produtos/kits-especiais/dia-das-maes/cesta-amor.png">
-      <h3>Cesta Amor 🌸</h3>
 
-      <p>Bolo caseiro + calda em pote + flores artificiais</p>
-      <p>Embalagem em caixa de madeira</p>
+      <img src="/assets/img-produtos/kits-especiais/dia-dos-pais/kit-pai-raiz.png">
 
-      <p><strong>Sabores:</strong> Chocolate, Tradicional, Fubá, Limão, Laranja, Coco</p>
-      <p><strong>Caldas:</strong> Chocolate, Ninho, Goiabada, Limão, Laranja, Beijinho</p>
+      <h3>🍻 Kit Pai Raiz</h3>
 
-      <div class="preco">R$ 120,00</div>
+      <p>
+        Para o pai que aprecia os momentos simples da vida e uma boa cerveja gelada.
+      </p>
 
-      <a href="https://wa.me/553592473598" target="_blank">Fazer Pedido</a>
+      <p>
+        Cooler personalizado de 5 litros, 2 Heinekens 330ml, salgadinho Torcida e petisqueira personalizada.
+      </p>
+
+      <p>
+        Um kit completo para brindar os bons momentos.
+      </p>
+
+      <div class="preco">R$ 220,00</div>
+
+      <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse no Kit Pai Raiz 🍻" target="_blank">
+        Fazer Pedido
+      </a>
+
     </div>
 
-    <!-- BOLO NA CANECA -->
+    <!-- CAIXA DE MEMÓRIAS -->
     <div class="kit-card">
-      <img src="/assets/img-produtos/kits-especiais/dia-das-maes/bolo-na-caneca-og.png">
-      <h3>Bolos na Caneca 💖</h3>
 
-      <p><strong>Amor em Camadas:</strong> massa branca + brigadeiro de ninho + brigadeiro ao leite</p>
-      <p><strong>Encanto de Chocolate:</strong> massa de chocolate + brigadeiro ao leite</p>
-      <p><strong>Doce Abraço:</strong> chocolate + mousse de ninho + morango + brigadeiro</p>
+      <img src="/assets/img-produtos/kits-especiais/dia-dos-pais/caixa-de-memorias.png">
 
-      <p>Inclui caneca personalizável</p>
+      <h3>📸 Caixa de Memórias</h3>
 
-      <div class="preco">R$ 90,00</div>
+      <p>
+        Um presente emocionante para reviver momentos especiais.
+      </p>
 
-      <a href="https://wa.me/5535992660184" target="_blank">Fazer Pedido</a>
+      <p>
+        Caixa personalizada com tampa exclusiva, 6 fotos internas e caneca personalizada de 325ml.
+      </p>
+
+      <p>
+        Uma lembrança única para guardar para sempre.
+      </p>
+
+      <div class="preco">R$ 89,00</div>
+
+      <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse na Caixa de Memórias 📸" target="_blank">
+        Fazer Pedido
+      </a>
+
+    </div>
+
+    <!-- MOMENTO DO HERÓI -->
+    <div class="kit-card">
+
+      <img src="/assets/img-produtos/kits-especiais/dia-dos-pais/momento-heroi.png">
+
+      <h3>🍺 Momento do Herói</h3>
+
+      <p>
+        Um presente simples, marcante e cheio de significado.
+      </p>
+
+      <p>
+        Caneca de Chopp personalizada, cerveja Corona 330ml e foto estilo Polaroid.
+      </p>
+
+      <p>
+        Perfeito para surpreender neste Dia dos Pais.
+      </p>
+
+      <div class="preco">R$ 99,00</div>
+
+      <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse no Momento do Herói 🍺" target="_blank">
+        Fazer Pedido
+      </a>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- CONDIÇÕES -->
 <section class="condicoes">
+
   <h2>Condições Especiais</h2>
 
   <ul>
-    <li>✔ Encomendas até 06 de Maio de 2026</li>
+    <li>✔ Encomendas até 06 de Agosto de 2026</li>
     <li>✔ Pagamento 100% antecipado via Pix, Débito ou Crédito</li>
-    <li>✔ Personalização com foto e/ou mensagem especial</li>
-    <li>✔ Pedidos corporativos sob consulta de prazo</li>
-    <li>✔ Entregas dia 10 de Maio (manhã) — consultar taxa</li>
-  </ul>
+    <li>✔ Personalização com foto, nome ou mensagem especial</li>
+    <li>✔ Pedidos corporativos sob consulta</li>
+   
+ </ul>
+
 </section>
 
 <!-- CTA -->
 <section class="cta-final">
-  <h2>💌 Garanta já o presente perfeito</h2>
-  <p>Surpreenda sua mãe com um presente único e cheio de amor</p>
 
-  <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse nos kits do Dia das Mães 💖" 
-     class="btn-primary" target="_blank">
-    Pedir pelo WhatsApp
+  <h2>🎁 Garanta já o presente perfeito para o seu pai</h2>
+
+  <p>
+    Demonstre sua gratidão com um presente personalizado e cheio de significado.
+  </p>
+
+  <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse nos Kits de Dia dos Pais 💛"
+     class="btn-primary"
+     target="_blank">
+     Pedir pelo WhatsApp
   </a>
+
 </section>
 
 <!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/5535992660184?text=Olá! Vim pela campanha de Dia das Mães 💖" 
-   class="whatsapp-float" target="_blank">
+<a href="https://wa.me/5535992660184?text=Olá! Vim pela campanha de Dia dos Pais 💛"
+   class="whatsapp-float"
+   target="_blank">
+
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
 </a>
 
 </body>
