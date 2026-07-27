@@ -68,10 +68,13 @@
   text-align: center;
 }
 
-.hero-imagem img {
-  max-width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+.hero-imagem img,
+.hero-imagem video {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+    display: block;
 }
 
 /* ==========================================
@@ -247,6 +250,84 @@
 }
 
 /* ==========================================
+   SABORES
+========================================== */
+
+.sabores {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.sabores h2 {
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sabores p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.sabores-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.sabores-grid div {
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    font-weight: 600;
+}
+
+.sabores-grid a {
+    display: block;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.sabores-grid a:hover {
+    background: #d4af37;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.massas {
+    margin-top: 50px;
+}
+
+.massas h3 {
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.massas span {
+    display: inline-block;
+    background: #d4af37;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 999px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* ==========================================
    CTA FINAL
 ========================================== */
 
@@ -346,7 +427,7 @@
       </p>
 
       <div class="hero-preco">
-        A partir de <strong>R$ XX,XX</strong>
+        A partir de <strong>R$ 149,90</strong>
       </div>
 
       <a href="https://wa.me/5535992660184?text=Olá! Tenho interesse na Festa na Caneca 🎉"
@@ -356,10 +437,23 @@
       </a>
     </div>
 
-    <div class="hero-imagem">
-      <img src="/assets/banners/banner-hero-festa-caneca.png"
-           alt="Festa na Caneca">
-    </div>
+<div class="hero-imagem">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto">
+
+        <source
+            src="/assets/videos-produtos/festa-na-caneca-mp4/banner-hero-festa-na-caneca.mp4"
+            type="video/mp4">
+
+        Seu navegador não suporta vídeos.
+    </video>
+
+</div>
   </div>
 </section>
 
@@ -450,14 +544,62 @@
 
 <div class="grid-galeria">
 
-<img src="/assets/festa-caneca/foto1.jpg">
-<img src="/assets/festa-caneca/foto2.jpg">
-<img src="/assets/festa-caneca/foto3.jpg">
-<img src="/assets/festa-caneca/foto4.jpg">
-<img src="/assets/festa-caneca/foto5.jpg">
-<img src="/assets/festa-caneca/foto6.jpg">
+<img src="/assets/img-produtos/kits-especiais/festa-na-caneca/galeria-1.jpeg">
+<img src="/assets/img-produtos/kits-especiais/festa-na-caneca/galeria-2.jpeg">
+<img src="/assets/img-produtos/kits-especiais/festa-na-caneca/galeria-3.jpeg">
+<img src="/assets/img-produtos/kits-especiais/festa-na-caneca/galeria-4.jpeg">
 
 </div>
+
+</section>
+
+<section class="sabores">
+
+    <h2>🍰 Escolha o sabor favorito</h2>
+
+    <p>
+        Além da personalização da caneca, você também escolhe
+        o recheio e a massa do mini bolo.
+    </p>
+
+<div class="sabores-grid">
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Brigadeiro. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Brigadeiro
+    </a>
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Prestígio. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Prestígio
+    </a>
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Sensação. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Sensação
+    </a>
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Ninho. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Ninho
+    </a>
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Doce de Leite. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Doce de Leite
+    </a>
+
+    <a href="https://wa.me/5535992660184?text=Olá! Quero encomendar uma Festa na Caneca sabor Mousse de Maracujá. Gostaria de saber os valores, opções de personalização e prazo de entrega.">
+        Mousse de Maracujá
+    </a>
+
+</div>
+
+    <div class="massas">
+
+        <h3>Massas disponíveis</h3>
+
+        <span>Tradicional (Pão de Ló)</span>
+        <span>Cacau</span>
+
+    </div>
+
+    <P>Todos os bolos são produzidos sob encomenda para garantir frescor e qualidade.</P>
 
 </section>
 
