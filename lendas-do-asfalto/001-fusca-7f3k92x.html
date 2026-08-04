@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Merriweather:wght@300;400;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Impede indexação -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Lendas do Asfalto Brasil | Fusca #001</title>
+
+    <style>
+
+/* ===================================================
+   LENDAS DO ASFALTO BRASIL
+   CSS OFICIAL V2
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    linear-gradient(
+        rgba(239,233,219,.45),
+        rgba(231,223,205,.45)
+    ),
+    url('/lendas-do-asfalto/img/lendas-fundo.png');
+
+    background-repeat:repeat;
+    background-size:700px;
+
+    color:#443d36;
+
+    font-family:'Merriweather', serif;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/*==============================*/
+
+.container{
+
+    width:min(92%,950px);
+
+    margin:auto;
+
+    padding:50px 0 80px;
+
+}
+
+/*==============================*/
+/* HERO BANNER */
+/*==============================*/
+
+.hero-banner{
+
+    margin-bottom:30px;
+
+}
+
+.hero-banner img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.10);
+
+    border:1px solid #d7cab3;
+
+}
+
+/*==============================*/
+/* HERO */
+/*==============================*/
+
+.hero{
+
+    position:relative;
+
+    background:#fbf8f1;
+
+    border:1px solid #d7cab3;
+
+    border-radius:18px;
+
+    padding:70px 50px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* Faixa estilo revista */
+
+.hero::before{
+
+    content:"EDIÇÃO COLECIONADOR • LENDAS DO ASFALTO BRASIL";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#222;
+
+    color:#d4af37;
+
+    text-align:center;
+
+    padding:12px;
+
+    font-family:'Oswald',sans-serif;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+}
+
+.hero h1{
+
+    margin-top:30px;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:56px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#2b2926;
+
+    text-align:center;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:18px auto;
+
+    text-align:center;
+
+}
+
+/*==============================*/
+
+.numero{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:#d4af37;
+
+    color:#222;
+
+    padding:14px 32px;
+
+    border-radius:40px;
+
+    font-family:'Oswald',sans-serif;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/*==============================*/
+
+.frase{
+
+    max-width:800px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-style:italic;
+
+    font-size:48px;
+
+    color:#6a5130;
+
+    line-height:1.3;
+
+    position:relative;
+
+}
+
+.frase::before,
+.frase::after{
+
+    content:"";
+
+    display:block;
+
+    width:180px;
+
+    height:2px;
+
+    background:#c8a24b;
+
+    margin:25px auto;
+
+}
+
+/*==============================*/
+
+.card{
+
+    position:relative;
+
+    background:#fcfaf5;
+
+    border-radius:18px;
+
+    margin-bottom:35px;
+
+    padding:45px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.06);
+
+    border:1px solid #e0d6c4;
+
+}
+
+/* Tarja dourada */
+
+.card::before{
+
+    content:"LENDAS DO ASFALTO";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    background:#c8a24b;
+
+    color:#222;
+
+    padding:8px 18px;
+
+    border-radius:18px 0 12px 0;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+/*==============================*/
+
+.card h2{
+
+    margin-top:18px;
+
+    margin-bottom:25px;
+
+    font-family:'Oswald',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:#2b2926;
+
+    border-bottom:2px solid #d4af37;
+
+    padding-bottom:12px;
+
+}
+
+.card p{
+
+    margin-bottom:18px;
+
+}
+
+.card ul{
+
+    margin-left:25px;
+
+}
+
+.card li{
+
+    margin-bottom:14px;
+
+}
+
+/*==============================*/
+
+.colecao{
+
+    background:#252321;
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    margin-top:50px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.12);
+
+}
+
+.colecao h2{
+
+    font-family:'Oswald',sans-serif;
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+}
+
+.colecao ul{
+
+    list-style:none;
+
+}
+
+.colecao li{
+
+    margin-bottom:12px;
+
+}
+
+/*==============================*/
+
+.colecao-link{
+
+    background:#fbf8f1;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    text-align:center;
+
+    margin-top:50px;
+
+    border:1px solid #d7cab3;
+
+}
+
+.colecao-link h2{
+
+    font-family:'Oswald',sans-serif;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#2b2926;
+
+    margin-bottom:20px;
+
+}
+
+.colecao-link p{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+/*==============================*/
+
+.btn-colecao{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:#d4af37;
+
+    color:#222;
+
+    text-decoration:none;
+
+    padding:18px 42px;
+
+    border-radius:40px;
+
+    font-family:'Oswald',sans-serif;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+
+}
+
+.btn-colecao:hover{
+
+    background:#bf972e;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.em-breve{
+
+    margin-top:50px;
+    padding:40px;
+    text-align:center;
+
+}
+
+.votacao{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:30px;
+
+}
+
+.btn-voto{
+
+    display:block;
+    padding:18px;
+
+    text-decoration:none;
+
+    background:#d9c7a6;
+
+    color:#443d36;
+
+    border:1px solid #b89c6a;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-voto:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+/*==============================*/
+
+.footer{
+
+    text-align:center;
+
+    margin-top:70px;
+
+    color:#645d56;
+
+}
+
+.footer h3{
+
+    font-family:'Oswald',sans-serif;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+
+    color:#2b2926;
+
+}
+
+.footer p:last-child{
+
+    margin-top:20px;
+
+    font-style:italic;
+
+    color:#6a5130;
+
+}
+
+/*==============================*/
+
+@media(max-width:768px){
+
+.hero{
+
+padding:55px 25px;
+
+}
+
+.hero-banner img{
+
+    max-height:280px;
+
+    object-fit:cover;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+letter-spacing:2px;
+
+}
+
+.frase{
+
+font-size:34px;
+
+}
+
+.card{
+
+padding:30px;
+
+}
+
+.card h2{
+
+font-size:26px;
+
+letter-spacing:2px;
+
+}
+
+.btn-colecao{
+
+width:100%;
+
+}
+
+body{
+
+font-size:17px;
+
+}
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- BANNER DA COLEÇÃO -->
+
+        <section class="hero-banner">
+            <img src="/lendas-do-asfalto/banner-hero/fusca-banner-hero.png"
+                 alt="Lendas do Asfalto Brasil - Fusca 1970">
+        </section>
+
+        <!-- SAUDAÇÃO -->
+
+        <section class="hero">
+
+            <span class="numero">
+                EDIÇÃO COLECIONADOR · Nº 001
+            </span>
+
+            <h1>Parabéns!</h1>
+
+            <p>
+                Você acaba de entrar para a
+                <strong>Garagem da Memória.</strong>
+            </p>
+
+            <p>
+                Esta caneca faz parte da coleção
+                <strong>Lendas do Asfalto Brasil</strong>,
+                uma homenagem aos clássicos que marcaram gerações.
+            </p>
+
+        </section>
+
+
+    <div class="frase">
+
+        "Ele não corria. Ele nos levava para casa."
+
+    </div>
+
+    <div class="card">
+
+        <h2>FUSCA 1970</h2>
+
+        <p>
+            Poucos carros conseguiram algo que o Fusca conquistou:
+            deixar de ser apenas um veículo para se tornar parte da
+            família.
+        </p>
+
+        <br>
+
+        <p>
+            Ele esteve presente em viagens, domingos ensolarados,
+            idas à escola e incontáveis histórias que continuam sendo
+            contadas até hoje.
+        </p>
+
+        <br>
+
+        <p>
+            Talvez ele tenha sido o carro do seu avô.
+        </p>
+
+        <p>
+            Talvez tenha sido o primeiro carro do seu pai.
+        </p>
+
+        <p>
+            Ou talvez ele ainda esteja estacionado na sua garagem.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>De onde surgiu o nome Fusca?</h2>
+
+        <p>
+            O nome "Fusca" não nasceu na fábrica. Ele nasceu nas ruas.
+        </p>
+
+        <br>
+
+        <p>
+            Na Alemanha, a sigla VW (Volkswagen) é pronunciada como
+            "fauvê". Com o tempo, os brasileiros começaram a adaptar
+            esse som, dando origem a apelidos como "Fuca", "Fuqui" e
+            "Fulque".
+        </p>
+
+        <br>
+
+        <p>
+            Foi em São Paulo que o nome ganhou a letra "S" e passou
+            a ser conhecido como <strong>Fusca</strong>, tornando-se
+            um dos apelidos mais famosos da história do Brasil.
+        </p>
+
+        <br>
+
+        <p>
+            Curiosamente, a Volkswagen nunca planejou esse nome.
+            Ele foi criado espontaneamente pelo povo brasileiro —
+            e acabou sendo adotado oficialmente anos depois.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Curiosidades</h2>
+
+        <ul>
+            <li>Produzido no Brasil de 1959 a 1986.</li>
+            <li>Retornou às linhas de produção entre 1993 e 1996.</li>
+            <li>Mais de 3 milhões de unidades foram fabricadas.</li>
+            <li>Seu motor Boxer tornou-se uma marca registrada.</li>
+            <li>É um dos carros mais queridos da história do Brasil.</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>O retorno da Lenda</h2>
+
+        <p>
+            Em 1986, parecia que a história do Fusca no Brasil havia
+            chegado ao fim.
+        </p>
+
+        <br>
+
+        <p>
+            Mas, sete anos depois, algo inesperado aconteceu.
+        </p>
+
+        <br>
+
+        <p>
+            Em 1993, o então presidente Itamar Franco incentivou a
+            Volkswagen a trazer o Fusca de volta às concessionárias.
+        </p>
+
+        <br>
+
+        <p>
+            Assim nasceu o famoso <strong>Fusca Itamar</strong>,
+            produzido até 1996, provando que algumas lendas
+            simplesmente se recusam a desaparecer.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Uma última lembrança</h2>
+
+        <p>
+            Existem carros mais rápidos.
+        </p>
+
+        <p>
+            Existem carros mais modernos.
+        </p>
+
+        <br>
+
+        <p>
+            Mas poucos conseguiram fazer milhões de pessoas sorrirem
+            apenas ao ouvir o barulho do motor.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>O Fusca fez.</strong>
+        </p>
+
+    </div>
+
+    <div class="colecao">
+
+        <h2>Você possui a Lenda Nº 001</h2>
+
+        <ul>
+            <li>✓ Fusca</li>
+            <li>○ Kombi</li>
+            <li>○ Opala</li>
+            <li>○ Chevette</li>
+        </ul>
+    </div>
+
+    <div class="em-breve">
+
+    <h2>Qual será a próxima Lenda?</h2>
+
+    <p>
+        A coleção <strong>Lendas do Asfalto Brasil</strong> continua
+        crescendo, e você pode ajudar a escolher os próximos clássicos.
+    </p>
+
+    <p>
+        Clique em uma das opções abaixo e envie seu voto diretamente
+        para a OG Criativo.
+    </p>
+
+    <div class="votacao">
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Gol%20GTI."
+           class="btn-voto">
+            Gol GTI
+        </a>
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Caravan."
+           class="btn-voto">
+            Caravan
+        </a>
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Maverick."
+           class="btn-voto">
+            Maverick
+        </a>
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Brasília."
+           class="btn-voto">
+            Brasília
+        </a>
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Jeep."
+           class="btn-voto">
+            Jeep
+        </a>
+
+        <a href="https://wa.me/5535992660184?text=Olá!%20Meu%20voto%20para%20a%20próxima%20Lenda%20é:%20Fiat%20147."
+           class="btn-voto">
+            Fiat 147
+        </a>
+
+    </div>
+
+    <br>
+
+    <p>
+        <strong>
+            Vote na próxima Lenda e ajude a escrever os próximos
+            capítulos da Garagem da Memória.
+        </strong>
+    </p>
+
+</div>
+
+    <div class="colecao-link">
+
+    <h2>Gostou da sua Lenda?</h2>
+
+    <p>
+        O Fusca é apenas o começo.
+        Conheça os outros clássicos da coleção
+        <strong>Lendas do Asfalto Brasil</strong>.
+    </p>
+
+    <a href="https://www.ogcriativo.com.br/lendas-do-asfalto-brasil"
+       class="btn-colecao">
+       Conhecer a Coleção Completa
+    </a>
+
+</div>
+
+    <div class="footer">
+
+        <h3>OG CRIATIVO</h3>
+
+        <p>Coleção Lendas do Asfalto Brasil</p>
+
+        <br>
+
+        <p>
+            "Algumas histórias nunca deixam de rodar."
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

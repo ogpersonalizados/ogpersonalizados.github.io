@@ -363,16 +363,36 @@ document.querySelectorAll('.produto-card-link').forEach(a => {
 });
 
 /* === 8. Carrossel customizado Banner 2 e 3 =========================== */
+
 const bannerSlides = document.querySelectorAll('.carousel .slide');
+
 let bannerIndex = 0;
 
-function mostrarBanner() {
-  bannerSlides.forEach(slide => slide.classList.remove('ativo'));
-  bannerSlides[bannerIndex].classList.add('ativo');
-  bannerIndex = (bannerIndex + 1) % bannerSlides.length;
-}
 
-setInterval(mostrarBanner, 5000); // troca de banner a cada 5 segundos
+/* Só executa o carrossel se existirem banners na página */
+
+if (bannerSlides.length > 0) {
+
+    function mostrarBanner() {
+
+        bannerSlides.forEach(slide => {
+
+            slide.classList.remove('ativo');
+
+        });
+
+
+        bannerSlides[bannerIndex].classList.add('ativo');
+
+
+        bannerIndex = (bannerIndex + 1) % bannerSlides.length;
+
+    }
+
+
+    setInterval(mostrarBanner, 5000);
+
+}
 
 /* =====================================================
    QUIZ CLUB DO CAOS
@@ -456,5 +476,3 @@ Sua caneca ideal é:
     document.getElementById("resultadoCaos").innerText = resultado;
 
 });
-
-

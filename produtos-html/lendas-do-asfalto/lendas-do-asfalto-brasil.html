@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lendas do Asfalto Brasil | OG Criativo</title>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/lendas-do-asfalto.css">
+
+<link rel="icon" href="/assets/icons/favicon.png">
+
+<style>
+    /* ==========================================
+RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:Poppins,sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.hero{
+
+    height:90vh;
+
+    background:url("/assets/img/lendas-do-asfalto/banner-lendas.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.hero-content{
+
+    max-width:750px;
+
+}
+
+.edicao{
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    margin:20px 0;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:1.7;
+
+    color:#ddd;
+
+}
+
+/* ==========================================
+BOTÕES
+========================================== */
+
+.btn-principal{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:15px 40px;
+
+background:#d4af37;
+
+color:#000;
+
+font-weight:700;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.btn-principal:hover{
+
+transform:translateY(-5px);
+
+background:#e7c65b;
+
+}
+
+/* ==========================================
+STATUS
+========================================== */
+
+.status{
+
+padding:70px 8%;
+
+}
+
+.status-box{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.status-box div{
+
+background:#111;
+
+padding:40px;
+
+border:1px solid #222;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+.status-box h3{
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:10px;
+
+}
+
+/* ==========================================
+HISTÓRIA
+========================================== */
+
+.historia{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+padding:100px 8%;
+
+}
+
+.historia h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+}
+
+.historia h2 span{
+
+color:#d4af37;
+
+}
+
+.historia p{
+
+margin-bottom:20px;
+
+line-height:1.8;
+
+color:#ccc;
+
+font-size:18px;
+
+}
+
+.historia img{
+
+border-radius:18px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.4);
+
+}
+
+/* ==========================================
+TÍTULOS
+========================================== */
+
+section h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+section h2 span{
+
+color:#d4af37;
+
+}
+
+.subtitulo{
+
+max-width:750px;
+
+margin:auto;
+
+text-align:center;
+
+color:#bbb;
+
+margin-bottom:70px;
+
+line-height:1.7;
+
+}
+
+/* ==========================================
+CARDS DA COLEÇÃO
+========================================== */
+
+.grid-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:35px;
+
+    padding:0;
+
+}
+
+.card-lenda{
+
+    background:linear-gradient(180deg,#111,#080808);
+
+    border:1px solid #1f1f1f;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.card-lenda:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+    box-shadow:0 20px 45px rgba(212,175,55,.20);
+
+}
+
+/* ==========================================
+CARROSSEL DAS LENDAS
+========================================== */
+
+.carrossel-lenda{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================
+ÁREA DAS FOTOS
+========================================== */
+
+.carrossel-slides{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    overflow:hidden;
+
+}
+
+
+.slide-lenda{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .4s ease;
+
+}
+
+
+.slide-lenda.slide-atual{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+.carrossel-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.carrossel-btn:hover{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+
+
+.carrossel-btn.anterior{
+
+    left:10px;
+
+}
+
+
+.carrossel-btn.proximo{
+
+    right:10px;
+
+}
+
+
+.indicadores-lenda{
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:7px;
+
+    z-index:10;
+
+}
+
+
+.indicador-lenda{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    cursor:pointer;
+
+}
+
+
+.indicador-lenda.indicador-atual{
+
+    background:#d4af37;
+
+    transform:scale(1.25);
+
+}
+
+/* ==========================================
+SETAS
+========================================== */
+
+.carrossel-btn{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+.carrossel-btn:hover{
+
+    background:#d4af37;
+
+    color:#000;
+
+}
+
+.carrossel-btn.anterior{
+
+    left:10px;
+
+}
+
+.carrossel-btn.proximo{
+
+    right:10px;
+
+}
+
+
+/* ==========================================
+INDICADORES
+========================================== */
+
+.indicadores-lenda{
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:7px;
+
+    z-index:5;
+
+}
+
+.indicador-lenda{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.indicador-lenda.indicador-atual{
+
+    background:#d4af37;
+
+    transform:scale(1.25);
+
+}
+
+/* ==========================================
+SELO DA COLEÇÃO
+========================================== */
+
+.numero{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+}
+
+/* ==========================================
+INFORMAÇÕES
+========================================== */
+
+.card-info{
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.card-info h3{
+
+    font-size:30px;
+
+    color:#fff;
+
+    margin-bottom:8px;
+
+}
+
+.categoria{
+
+    color:#d4af37;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+
+}
+
+.card-info p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    flex:1;
+
+}
+
+/* ==========================================
+ESPECIFICAÇÕES
+========================================== */
+
+.especificacoes{
+
+    list-style:none;
+
+    margin-bottom:25px;
+
+}
+
+.especificacoes li{
+
+    margin-bottom:10px;
+
+    color:#ddd;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+PREÇO
+========================================== */
+
+.preco{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#d4af37;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+BOTÃO DO CARD
+========================================== */
+
+.btn-card{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:14px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-card:hover{
+
+    background:#e7c65b;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+QR CODE
+========================================== */
+
+.qr-code{
+
+padding:100px 8%;
+
+background:#0d0d0d;
+
+}
+
+.qr-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.qr-item{
+
+background:#111;
+
+padding:40px;
+
+border-radius:18px;
+
+border:1px solid #1f1f1f;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.qr-item:hover{
+
+transform:translateY(-8px);
+
+border-color:#d4af37;
+
+}
+
+.icone{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.qr-item h3{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+color:#d4af37;
+
+}
+
+.qr-item p{
+
+color:#cfcfcf;
+
+line-height:1.7;
+
+}
+
+/* ==========================================
+ITENS INCLUSOS
+========================================== */
+
+.acompanha{
+
+padding:100px 8%;
+
+}
+
+.acompanha-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.item{
+
+background:#111;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:18px;
+
+border:1px solid #1f1f1f;
+
+transition:.3s;
+
+}
+
+.item:hover{
+
+border-color:#d4af37;
+
+transform:translateY(-8px);
+
+}
+
+.item h3{
+
+margin-bottom:15px;
+
+color:#d4af37;
+
+font-size:22px;
+
+}
+
+.item p{
+
+color:#ccc;
+
+line-height:1.7;
+
+}
+
+/* ==========================================
+PRÓXIMAS LENDAS
+========================================== */
+
+.proximas{
+
+    padding:100px 8%;
+
+    background:#0a0a0a;
+
+    text-align:center;
+
+}
+
+.votacao{
+
+    margin-top:50px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.votacao a{
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    background:#161616;
+
+    color:#d4af37;
+
+    border:1px solid #333;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.votacao a:hover{
+
+    background:#d4af37;
+
+    color:#000;
+
+    transform:translateY(-4px);
+
+}
+
+.obs{
+
+    margin-top:35px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+CTA FINAL
+========================================== */
+
+.cta-final{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+    background:linear-gradient(180deg,#050505,#111);
+
+}
+
+.cta-final h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.cta-final p{
+
+    color:#ccc;
+
+    font-size:20px;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #222;
+
+    background:#000;
+
+}
+
+.footer-logo{
+
+    height:90px;
+
+    margin:auto;
+
+    margin-bottom:30px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.social-icons a{
+
+    transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.social-icons img{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+footer p{
+
+    color:#888;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050505;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#e5c75b;
+
+}
+
+/* ==========================================
+RESPONSIVO
+========================================== */
+
+@media (max-width: 992px){
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .historia{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .status-box,
+    .qr-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    header{
+        padding:15px;
+    }
+
+    .hero{
+        height:75vh;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section h2{
+        font-size:32px;
+    }
+
+    .card-info h3{
+        font-size:24px;
+    }
+
+    .preco{
+        font-size:26px;
+    }
+
+    .cta-final h2{
+        font-size:34px;
+    }
+
+    .votacao a{
+        width:100%;
+    }
+
+    /* ===== CORREÇÃO DE ALINHAMENTO ===== */
+
+    .status,
+    .historia,
+    .colecao,
+    .qr-code,
+    .acompanha,
+    .proximas,
+    .cta-final{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .grid-cards,
+    .status-box,
+    .qr-grid,
+    .acompanha-grid{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .hero{
+        height:65vh;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .btn-principal{
+        width:100%;
+        text-align:center;
+    }
+
+    .btn-card{
+        width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .grid-cards{
+
+        grid-template-columns:1fr;
+
+        padding:40px 20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .carrossel-btn{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:18px;
+
+    }
+
+    .carrossel-btn.anterior{
+
+        left:7px;
+
+    }
+
+    .carrossel-btn.proximo{
+
+        right:7px;
+
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =======================================
+HEADER
+======================================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="/index.html">
+            <img src="/assets/icons/og-logo-dourado.png" alt="OG Criativo">
+        </a>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="#colecao">Coleção</a></li>
+            <li><a href="#qr-code">QR Code</a></li>
+            <li><a href="#proximas">Próximas Lendas</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- =======================================
+HERO
+======================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <span class="edicao">
+
+                Série Colecionador • Edição 001
+
+            </span>
+
+            <h1>
+
+                Lendas do Asfalto Brasil
+
+            </h1>
+
+            <p>
+
+                Os carros que fizeram parte da história do Brasil agora
+                eternizados em uma coleção exclusiva de canecas.
+
+            </p>
+
+            <a href="#colecao" class="btn-principal">
+
+                Conheça a Coleção
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+STATUS DA COLEÇÃO
+======================================= -->
+
+<section class="status">
+
+<div class="status-box">
+
+<div>
+
+<h3>004</h3>
+
+<p>Lendas lançadas</p>
+
+</div>
+
+<div>
+
+<h3>100+</h3>
+
+<p>Objetivo da coleção</p>
+
+</div>
+
+<div>
+
+<h3>QR CODE</h3>
+
+<p>Conteúdo exclusivo</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================
+HISTÓRIA
+======================================= -->
+
+<section class="historia">
+
+<div class="historia-texto">
+
+<h2>
+
+Mais que carros.
+
+<span>São lembranças.</span>
+
+</h2>
+
+<p>
+
+Alguns carros fizeram muito mais do que transportar pessoas.
+
+Eles levaram famílias para viajar, participaram de encontros,
+foram o primeiro carro de muitos brasileiros e até hoje despertam
+emoção por onde passam.
+
+</p>
+
+<p>
+
+A coleção <strong>Lendas do Asfalto Brasil</strong> nasceu para homenagear
+esses clássicos através de uma série exclusiva de canecas colecionáveis.
+
+</p>
+
+<p>
+
+Cada modelo possui uma arte exclusiva, cartão de coleção
+e um QR Code que leva para uma página especial contando curiosidades,
+história e ficha técnica daquele veículo.
+
+</p>
+
+</div>
+
+<div class="historia-imagem">
+
+<img src="/assets/banners/banner-hero-lendas-asfalto.png"
+alt="Coleção Lendas do Asfalto">
+
+</div>
+
+</section>
+
+<!-- =======================================
+COLEÇÃO
+======================================= -->
+
+<section class="colecao" id="colecao">
+
+<h2>
+
+Primeiras <span>Lendas</span>
+
+</h2>
+
+<p class="subtitulo">
+
+Os quatro primeiros modelos da coleção já estão disponíveis.
+
+Escolha a sua primeira lenda.
+
+</p>
+
+<div class="grid-cards">
+
+<!-- =========================
+FUSCA
+========================= -->
+
+<div class="card-lenda">
+
+    <div class="card-imagem">
+
+        <span class="numero">#001</span>
+
+        <!-- CARROSSEL DE IMAGENS -->
+
+        <div class="carrossel-lenda">
+
+            <button class="carrossel-btn anterior" type="button">
+                &#10094;
+            </button>
+
+            <div class="carrossel-slides">
+
+                <!-- FOTO 1 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-fusca.png"
+                    alt="Fusca 1970 - Lendas do Asfalto Brasil"
+                    class="slide-lenda slide-atual"
+                >
+
+                <!-- FOTO 2 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-fusca-frente.png"
+                    alt="Fusca 1970 - Lendas do Asfalto Brasil"
+                    class="slide-lenda"
+                >
+
+                <!-- FOTO 3 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-fusca-verso.png"
+                    alt="Fusca 1970 - Lendas do Asfalto Brasil"
+                    class="slide-lenda"
+                >
+
+            </div>
+
+            <button class="carrossel-btn proximo" type="button">
+                &#10095;
+            </button>
+
+            <!-- INDICADORES -->
+
+            <div class="indicadores-lenda">
+
+                <span class="indicador-lenda indicador-atual"></span>
+
+                <span class="indicador-lenda"></span>
+
+                <span class="indicador-lenda"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card-info">
+
+        <h3>Fusca 1970</h3>
+
+        <span class="categoria">Volkswagen</span>
+
+        <p>
+
+            Muito mais que um automóvel. O Fusca marcou gerações,
+            conquistou milhões de brasileiros e se tornou um dos
+            maiores ícones da história automobilística.
+
+        </p>
+
+        <ul class="especificacoes">
+
+            <li>🚗 Série Colecionador #001</li>
+
+            <li>📱 QR Code exclusivo</li>
+
+            <li>📜 Cartão colecionável</li>
+
+        </ul>
+
+        <span class="preco">
+
+            R$ 50,00
+
+        </span>
+
+        <a
+            href="https://wa.me/5535992660184?text=Olá! Quero a caneca Fusca 1970 da coleção Lendas do Asfalto Brasil."
+            class="btn-card"
+        >
+
+            Quero essa lenda
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+KOMBI
+========================= -->
+
+<div class="card-lenda">
+
+    <div class="card-imagem">
+
+        <span class="numero">#002</span>
+
+        <!-- CARROSSEL -->
+
+        <div class="carrossel-lenda">
+
+            <button class="carrossel-btn anterior" type="button">
+                &#10094;
+            </button>
+
+            <div class="carrossel-slides">
+
+                <!-- FOTO 1 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-kombi.png"
+                    alt="Kombi - Lendas do Asfalto Brasil"
+                    class="slide-lenda slide-atual"
+                >
+
+                <!-- FOTO 2 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-kombi-frente.png"
+                    alt="Kombi - Frente"
+                    class="slide-lenda"
+                >
+
+                <!-- FOTO 3 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-kombi-verso.png"
+                    alt="Kombi - Verso"
+                    class="slide-lenda"
+                >
+
+            </div>
+
+            <button class="carrossel-btn proximo" type="button">
+                &#10095;
+            </button>
+
+            <div class="indicadores-lenda">
+
+                <span class="indicador-lenda indicador-atual"></span>
+
+                <span class="indicador-lenda"></span>
+
+                <span class="indicador-lenda"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card-info">
+
+        <h3>Kombi</h3>
+
+        <span class="categoria">Volkswagen</span>
+
+        <p>
+
+            Símbolo de liberdade, trabalho e viagens inesquecíveis.
+            A Kombi transportou sonhos, famílias e histórias por
+            décadas.
+
+        </p>
+
+        <ul class="especificacoes">
+
+            <li>🚗 Série Colecionador #002</li>
+
+            <li>📱 QR Code exclusivo</li>
+
+            <li>📜 Cartão colecionável</li>
+
+        </ul>
+
+        <span class="preco">
+
+            R$ 50,00
+
+        </span>
+
+        <a
+            href="https://wa.me/5535992660184?text=Olá! Quero a caneca Kombi da coleção Lendas do Asfalto Brasil."
+            class="btn-card"
+        >
+
+            Quero essa lenda
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+OPALA
+========================= -->
+
+<div class="card-lenda">
+
+    <div class="card-imagem">
+
+        <span class="numero">#003</span>
+
+        <!-- CARROSSEL -->
+
+        <div class="carrossel-lenda">
+
+            <button class="carrossel-btn anterior" type="button">
+                &#10094;
+            </button>
+
+            <div class="carrossel-slides">
+
+                <!-- FOTO 1 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-opala.png"
+                    alt="Chevrolet Opala - Lendas do Asfalto Brasil"
+                    class="slide-lenda slide-atual"
+                >
+
+                <!-- FOTO 2 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-opala-frente.png"
+                    alt="Chevrolet Opala - Frente"
+                    class="slide-lenda"
+                >
+
+                <!-- FOTO 3 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-opala-verso.png"
+                    alt="Chevrolet Opala - Verso"
+                    class="slide-lenda"
+                >
+
+            </div>
+
+            <button class="carrossel-btn proximo" type="button">
+                &#10095;
+            </button>
+
+            <div class="indicadores-lenda">
+
+                <span class="indicador-lenda indicador-atual"></span>
+
+                <span class="indicador-lenda"></span>
+
+                <span class="indicador-lenda"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card-info">
+
+        <h3>Chevrolet Opala</h3>
+
+        <span class="categoria">Chevrolet</span>
+
+        <p>
+
+            Potência, elegância e respeito nas estradas brasileiras.
+            Um dos sedãs mais desejados da história nacional.
+
+        </p>
+
+        <ul class="especificacoes">
+
+            <li>🚗 Série Colecionador #003</li>
+
+            <li>📱 QR Code exclusivo</li>
+
+            <li>📜 Cartão colecionável</li>
+
+        </ul>
+
+        <span class="preco">
+
+            R$ 50,00
+
+        </span>
+
+        <a
+            href="https://wa.me/5535992660184?text=Olá! Quero a caneca Opala da coleção Lendas do Asfalto Brasil."
+            class="btn-card"
+        >
+
+            Quero essa lenda
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+CHEVETTE
+========================= -->
+
+<div class="card-lenda">
+
+    <div class="card-imagem">
+
+        <span class="numero">#004</span>
+
+        <!-- CARROSSEL -->
+
+        <div class="carrossel-lenda">
+
+            <button class="carrossel-btn anterior" type="button">
+                &#10094;
+            </button>
+
+            <div class="carrossel-slides">
+
+                <!-- FOTO 1 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-chevette.png"
+                    alt="Chevette - Lendas do Asfalto Brasil"
+                    class="slide-lenda slide-atual"
+                >
+
+                <!-- FOTO 2 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-chevette-frente.png"
+                    alt="Chevette - Frente"
+                    class="slide-lenda"
+                >
+
+                <!-- FOTO 3 -->
+                <img
+                    src="/assets/img-produtos/lendas-do-asfalto-brasil/caneca-chevette-verso.png"
+                    alt="Chevette - Verso"
+                    class="slide-lenda"
+                >
+
+            </div>
+
+            <button class="carrossel-btn proximo" type="button">
+                &#10095;
+            </button>
+
+            <div class="indicadores-lenda">
+
+                <span class="indicador-lenda indicador-atual"></span>
+
+                <span class="indicador-lenda"></span>
+
+                <span class="indicador-lenda"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card-info">
+
+        <h3>Chevette</h3>
+
+        <span class="categoria">Chevrolet</span>
+
+        <p>
+
+            Compacto, econômico e inesquecível. O Chevette conquistou
+            uma legião de apaixonados e até hoje é presença garantida
+            nos encontros de carros antigos.
+
+        </p>
+
+        <ul class="especificacoes">
+
+            <li>🚗 Série Colecionador #004</li>
+
+            <li>📱 QR Code exclusivo</li>
+
+            <li>📜 Cartão colecionável</li>
+
+        </ul>
+
+        <span class="preco">
+
+            R$ 50,00
+
+        </span>
+
+        <a
+            href="https://wa.me/5535992660184?text=Olá! Quero a caneca Chevette da coleção Lendas do Asfalto Brasil."
+            class="btn-card"
+        >
+
+            Quero essa lenda
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =======================================
+QR CODE
+======================================= -->
+
+<section class="qr-code" id="qr-code">
+
+    <h2>Mais que uma caneca.<span> Uma experiência.</span></h2>
+
+    <p class="subtitulo">
+
+        Cada caneca da coleção possui um QR Code exclusivo que leva você
+        para uma página repleta de curiosidades sobre aquele modelo.
+
+    </p>
+
+    <div class="qr-grid">
+
+        <div class="qr-item">
+
+            <div class="icone">☕</div>
+
+            <h3>Caneca</h3>
+
+            <p>
+                Receba sua caneca personalizada da coleção.
+            </p>
+
+        </div>
+
+        <div class="qr-item">
+
+            <div class="icone">📱</div>
+
+            <h3>Escaneie</h3>
+
+            <p>
+                Utilize a câmera do celular para ler o QR Code.
+            </p>
+
+        </div>
+
+        <div class="qr-item">
+
+            <div class="icone">🚗</div>
+
+            <h3>Descubra</h3>
+
+            <p>
+                Conheça curiosidades, história, ficha técnica e muito mais.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+ITENS DA COLEÇÃO
+======================================= -->
+
+<section class="acompanha">
+
+<h2>O que acompanha <span>cada caneca</span></h2>
+
+<div class="acompanha-grid">
+
+<div class="item">
+
+<h3>☕ Caneca Premium</h3>
+
+<p>
+
+Arte exclusiva em alta definição.
+
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>📜 Cartão Colecionável</h3>
+
+<p>
+
+Identificação oficial da coleção.
+
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>📱 QR Code Exclusivo</h3>
+
+<p>
+
+Acesso à página especial daquele clássico.
+
+</p>
+
+</div>
+
+<div class="item">
+
+<h3>🏁 Numeração Oficial</h3>
+
+<p>
+
+Cada modelo possui sua posição dentro da coleção.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================
+PRÓXIMAS LENDAS
+======================================= -->
+
+<section class="proximas" id="proximas">
+
+    <h2>Qual será a próxima <span>Lenda?</span></h2>
+
+    <p>
+        Ajude a decidir qual clássico será lançado na próxima edição.
+    </p>
+
+    <div class="votacao">
+
+        <!-- GOL GTI -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20o%20Gol%20GTI!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Gol GTI
+        </a>
+
+        <!-- CARAVAN -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20a%20Caravan!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Caravan
+        </a>
+
+        <!-- MAVERICK -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20o%20Maverick!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Maverick
+        </a>
+
+        <!-- BRASÍLIA -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20a%20Bras%C3%ADlia!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Brasília
+        </a>
+
+        <!-- JEEP WILLYS -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20o%20Jeep%20Willys!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Jeep Willys
+        </a>
+
+        <!-- FIAT 147 -->
+        <a
+            href="https://wa.me/5535992660184?text=Meu%20voto%20para%20a%20pr%C3%B3xima%20Lenda%20do%20Asfalto%20%C3%A9%20o%20Fiat%20147!"
+            target="_blank"
+            rel="noopener noreferrer">
+            Fiat 147
+        </a>
+
+    </div>
+
+    <p class="obs">
+        🏁 Seu voto ajuda a escolher a próxima Lenda do Asfalto!
+    </p>
+
+</section>
+
+<!-- =======================================
+CTA
+======================================= -->
+
+<section class="cta-final">
+
+<h2>
+
+Qual será a primeira lenda da sua coleção?
+
+</h2>
+
+<p>
+
+Comece hoje sua coleção Lendas do Asfalto Brasil.
+
+</p>
+
+<a href="https://wa.me/5535992660184?text=Olá! Quero conhecer a coleção Lendas do Asfalto Brasil."
+
+class="btn-principal"
+
+target="_blank">
+
+Quero começar minha coleção
+
+</a>
+
+</section>
+
+<!-- =======================================
+FOOTER
+======================================= -->
+
+<footer>
+
+<img src="/assets/icons/og-logo-dourado.png"
+class="footer-logo"
+alt="OG Criativo">
+
+<div class="social-icons">
+
+<a href="https://wa.me/5535992660184" target="_blank">
+<img src="/assets/icons/icone-whatsapp-dourado.png" alt="WhatsApp">
+</a>
+
+<a href="https://www.instagram.com/ogcriativo/" target="_blank">
+<img src="/assets/icons/icone-instagram-dourado.webp" alt="Instagram">
+</a>
+
+<a href="https://facebook.com/ogcriativo" target="_blank">
+<img src="/assets/icons/icone-facebook-dourado.png" alt="Facebook">
+</a>
+
+</div>
+
+<p>
+
+© OG Criativo<br>
+
+Todos os direitos reservados.
+
+</p>
+
+</footer>
+
+<script src="/js/script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const carrosseis = document.querySelectorAll(".carrossel-lenda");
+
+    carrosseis.forEach(function(carrossel){
+
+        const slides = carrossel.querySelectorAll(".slide-lenda");
+
+        const indicadores = carrossel.querySelectorAll(".indicador-lenda");
+
+        const anterior = carrossel.querySelector(".anterior");
+
+        const proximo = carrossel.querySelector(".proximo");
+
+        let atual = 0;
+
+
+        /* ==========================================
+           MOSTRAR FOTO
+        ========================================== */
+
+        function mostrarSlide(numero){
+
+            slides.forEach(function(slide){
+
+                slide.classList.remove("slide-atual");
+
+            });
+
+
+            indicadores.forEach(function(indicador){
+
+                indicador.classList.remove("indicador-atual");
+
+            });
+
+
+            slides[numero].classList.add("slide-atual");
+
+
+            if(indicadores[numero]){
+
+                indicadores[numero].classList.add("indicador-atual");
+
+            }
+
+
+            atual = numero;
+
+        }
+
+
+        /* ==========================================
+           PRÓXIMA FOTO
+        ========================================== */
+
+        proximo.addEventListener("click", function(){
+
+            atual++;
+
+            if(atual >= slides.length){
+
+                atual = 0;
+
+            }
+
+            mostrarSlide(atual);
+
+        });
+
+
+        /* ==========================================
+           FOTO ANTERIOR
+        ========================================== */
+
+        anterior.addEventListener("click", function(){
+
+            atual--;
+
+            if(atual < 0){
+
+                atual = slides.length - 1;
+
+            }
+
+            mostrarSlide(atual);
+
+        });
+
+
+        /* ==========================================
+           INDICADORES
+        ========================================== */
+
+        indicadores.forEach(function(indicador, numero){
+
+            indicador.addEventListener("click", function(){
+
+                mostrarSlide(numero);
+
+            });
+
+        });
+
+
+        /* ==========================================
+           INICIA NA PRIMEIRA FOTO
+        ========================================== */
+
+        mostrarSlide(0);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
