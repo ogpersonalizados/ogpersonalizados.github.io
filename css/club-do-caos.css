@@ -799,6 +799,352 @@ WHATSAPP
 
 }
 
+/* =====================================================
+   CLUB DO CAOS 2.0
+===================================================== */
+
+.colecao-edicao{
+    width:100%;
+    max-width:1000px;
+    margin:90px auto 45px;
+    text-align:center;
+}
+
+.colecao-edicao h2{
+    font-size:2.5rem;
+    color:#d4af37;
+    margin-bottom:12px;
+}
+
+.colecao-edicao .subtitulo{
+    margin-bottom:0;
+}
+
+
+/* ===========================
+   DESTAQUE NOVA EDIÇÃO
+=========================== */
+
+.nova-edicao{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:100px auto 30px;
+
+    padding:55px 30px;
+
+    text-align:center;
+
+    border:1px solid rgba(212,175,55,.45);
+
+    border-radius:25px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(212,175,55,.12),
+        transparent 65%
+    ),
+    #0d0d0d;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+}
+
+
+/* brilho decorativo */
+
+.nova-edicao::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        transparent
+    );
+
+}
+
+
+/* selo */
+
+.nova-edicao-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    margin-bottom:18px;
+
+    border-radius:30px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    font-size:.85rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+
+/* título */
+
+.nova-edicao h2{
+
+    margin-bottom:10px;
+
+    font-size:3.2rem;
+
+    color:#fff;
+
+    letter-spacing:2px;
+
+}
+
+
+/* frase */
+
+.nova-edicao p{
+
+    margin-bottom:10px;
+
+    color:#d4af37;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+}
+
+
+/* destaque */
+
+.nova-edicao strong{
+
+    display:block;
+
+    color:#ccc;
+
+    font-size:1rem;
+
+    font-weight:400;
+
+}
+
+
+/* ===========================
+   CARDS DO 2.0
+=========================== */
+
+.nova-edicao + .colecao-edicao{
+
+    margin-top:45px;
+
+}
+
+
+/* ===========================
+   RESULTADO DO QUIZ
+=========================== */
+
+#resultadoCaos{
+
+    animation:fade .5s ease;
+
+}
+
+
+.resultado-quiz{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.3);
+
+}
+
+
+.resultado-quiz h3{
+
+    color:#d4af37;
+
+    margin-bottom:12px;
+
+}
+
+
+.resultado-quiz p{
+
+    color:#ddd;
+
+    margin-bottom:10px;
+
+}
+
+
+.resultado-quiz .caneca-resultado{
+
+    color:#fff;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    margin:15px 0;
+
+}
+
+
+.resultado-quiz a{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:12px 25px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.resultado-quiz a:hover{
+
+    background:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-comprar-resultado {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+
+    background: #25D366;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.btn-comprar-resultado:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =====================================================
+   IMAGENS DAS CANECAS NO RESULTADO DO QUIZ
+===================================================== */
+
+/* CANECA PRINCIPAL */
+.imagem-caneca-resultado {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+    margin: 20px auto;
+}
+
+
+/* CANECAS ALTERNATIVAS */
+.imagem-caneca-alternativa {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 15px auto;
+}
+
+
+/* ===========================
+   AJUSTE SELO DOS CARDS
+=========================== */
+
+.card{
+
+    position:relative;
+
+}
+
+
+/* ===========================
+   MOBILE - CLUB DO CAOS 2.0
+=========================== */
+
+@media (max-width:768px){
+
+    .nova-edicao{
+
+        margin-top:70px;
+
+        padding:40px 20px;
+
+    }
+
+    .nova-edicao h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .nova-edicao p{
+
+        font-size:1.1rem;
+
+    }
+
+    .colecao-edicao h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
 @media (max-width:768px){
 
 header{
