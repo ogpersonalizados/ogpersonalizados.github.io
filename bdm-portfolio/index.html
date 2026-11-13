@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Bruno Mattos | Criação de Sites para Pequenos Negócios</title>
+
+  <meta name="description" content="Criação de sites profissionais, responsivos e catálogos digitais para pequenos negócios. Conheça os projetos de Bruno Mattos e solicite um orçamento.">
+
+  <meta name="theme-color" content="#f2f5f8">
+
+<!-- Open Graph: compartilhamento -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Bruno Mattos | Criação de Sites para Pequenos Negócios">
+<meta property="og:description" content="Criação de sites profissionais, responsivos e catálogos digitais para pequenos negócios. Conheça os projetos de Bruno Mattos e solicite um orçamento.">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bruno Mattos | Criação de Sites para Pequenos Negócios">
+<meta name="twitter:description" content="Criação de sites profissionais, responsivos e catálogos digitais para pequenos negócios.">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+.eyebrow {
+  color: var(--accent);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  max-width: 17ch;
+}
+
+:root{
+  --bg:#f2f5f8; --surface:#ffffff; --ink:#12203a; --muted:#51607a; --line:#d5dde8;
+  --accent:#2447e0; --accent-ink:#ffffff; --soft:#e4eafc;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1626; --surface:#18213a; --ink:#eaf0fb; --muted:#9fb0cc; --line:#2a3656;
+    --accent:#7d96ff; --accent-ink:#0f1626; --soft:#1f2b52; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1626; --surface:#18213a; --ink:#eaf0fb; --muted:#9fb0cc; --line:#2a3656;
+  --accent:#7d96ff; --accent-ink:#0f1626; --soft:#1f2b52; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 32px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:8px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hero{padding:72px 0 40px}
+.hero h1{font-size:clamp(2.3rem,7vw,4.4rem);font-weight:800;max-width:15ch;letter-spacing:-.02em}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:48ch;margin:20px 0 30px}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.shot{display:block;height:260px;border-bottom:1px solid var(--line);overflow:hidden;background:var(--soft)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.bar{display:flex;gap:6px;margin-bottom:12px}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.mock{background:var(--surface);border-radius:10px;height:calc(100% - 22px);padding:14px;display:flex;flex-direction:column;gap:8px}
+.mock b{display:block;height:14px;width:55%;border-radius:4px}
+.mock s{display:block;height:8px;width:80%;border-radius:4px;background:var(--line);text-decoration:none}
+.mock s+s{width:62%}
+.mock em{margin-top:auto;display:block;height:26px;width:90px;border-radius:999px}
+.m1 b,.m1 em{background:#d9568a}
+.m2 b,.m2 em{background:#e8913a}
+.info{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.info h3{font-size:1.4rem}
+.info p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0}
+.tags span{font-size:.85rem;padding:4px 12px;border-radius:999px;background:var(--soft)}
+.quote{border-left:3px solid var(--accent);padding:4px 0 4px 14px;font-style:italic;margin:6px 0}
+.quote small{display:block;font-style:normal;color:var(--muted)}
+.info .link{margin-top:auto;font-weight:600;color:var(--accent)}
+.steps{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;border-top:2px solid var(--accent);padding-top:14px}
+.steps li::before{content:counter(s);font:800 1.6rem "Bricolage Grotesque",sans-serif;color:var(--accent);display:block}
+.steps strong{display:block;font-size:1.1rem;margin-bottom:4px}
+.steps span{color:var(--muted)}
+.offer{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.offer ul{margin:0;padding-left:20px}
+.offer li{margin:4px 0}
+.offer h3{margin-bottom:8px;font-size:1.25rem}
+.contact{text-align:center}
+.contact .lead{margin-left:auto;margin-right:auto}
+footer{padding:28px 0 44px;color:var(--muted);text-align:center;font-size:.9rem}
+.depo{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:18px;padding:28px;max-width:760px}
+.depo p{margin:0 0 14px;font-size:1.1rem;line-height:1.7}
+.depo cite{font-style:normal;font-weight:600;color:var(--muted)}
+@media (max-width:520px){.btn.ghost{margin:10px 0 0}}
+
+
+.info h4 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.05rem;
+  margin: 12px 0 0;
+}
+
+.info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.info li {
+  margin: 5px 0;
+}
+
+.info .tags {
+  margin-top: 12px;
+}
+
+
+.proj .info ul {
+  padding-left: 20px;
+  margin: 10px 0 18px;
+}
+
+.proj .info li {
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+
+.proj .info p {
+  line-height: 1.65;
+}
+
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.language-switch a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+
+.language-switch a:hover {
+  opacity: 1;
+}
+
+.language-switch a.active {
+  opacity: 1;
+  font-weight: 800;
+}
+
+.language-switch span {
+  opacity: 0.4;
+}
+
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 600px) {
+
+  .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero {
+    padding: 44px 0 32px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .language-switch {
+    margin-bottom: 22px;
+  }
+
+  .hero .btn {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    margin: 12px 0 0;
+  }
+
+  .hero .btn.ghost {
+    margin-left: 0;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .shot {
+    height: 210px;
+  }
+
+  .info {
+    padding: 18px;
+  }
+
+  .offer {
+    padding: 20px;
+  }
+
+  .depo {
+    padding: 20px;
+  }
+
+  .depo p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 24px 0 36px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ORGANIZAÇÃO DO RODAPÉ */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-content a:hover {
+  color: var(--accent);
+}
+
+/* RODAPÉ MOBILE */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-content span,
+  .footer-content a {
+    white-space: nowrap;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+
+    <div class="language-switch">
+      <a href="/index.html" class="active">PT</a>
+      <span>|</span>
+      <a href="/en/index.html">EN</a>
+    </div>
+
+    <p class="eyebrow">DESENVOLVIMENTO DE SITES • BRASIL E EXTERIOR</p>
+
+    <h1>Seu negócio merece uma presença profissional na internet.</h1>
+
+    <p>
+      Crio sites rápidos, responsivos e fáceis de usar para pequenos
+      negócios, com informações organizadas, apresentação de produtos
+      e contato direto com seus clientes.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/5535992044119?text=Oi%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conhecer%20seus%20servi%C3%A7os">
+       Solicitar orçamento
+    </a>
+
+    <a class="btn ghost" href="#projetos">
+      Conhecer projetos
+    </a>
+
+  </div>
+</header>
+
+
+<section id="projetos">
+  <div class="wrap">
+    <h2>Trabalhos</h2>
+    <p class="lead">Sites reais, feitos para negócios da minha cidade.</p>
+    <div class="grid">
+      <article class="proj">
+        <a class="shot" href="https://jessicatozziconfeitaria.com.br" aria-label="Visit Jéssica Tozzi Confeitaria website">
+          <img src="/imagens/jessica-confeitaria-print.jpeg" alt="Jéssica Tozzi Confeitaria website" loading="lazy">
+        </a>
+       
+        <div class="info">
+
+<h3>Jéssica Tozzi Confeitaria</h3>
+
+<p>
+  Desenvolvimento de um site para apresentar a confeitaria,
+  seus produtos e facilitar o contato de clientes interessados
+  em realizar encomendas.
+</p>
+
+<p><strong>O que foi desenvolvido:</strong></p>
+
+<ul>
+  <li>Vitrine digital para apresentação dos produtos.</li>
+  <li>Organização das informações da confeitaria.</li>
+  <li>Galeria de fotos.</li>
+  <li>Contato e encaminhamento de pedidos pelo WhatsApp.</li>
+  <li>Layout adaptável para celulares e computadores.</li>
+</ul>
+
+<p><strong>Resultado:</strong> uma presença digital que facilita
+a divulgação dos produtos e ajuda a confeitaria a alcançar
+clientes além da sua cidade.</p>
+
+<div class="tags">
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+  <span>Responsivo</span>
+  <span>WhatsApp</span>
+</div>
+
+<a class="link"
+   href="https://jessicatozziconfeitaria.com.br"
+   target="_blank"
+   rel="noopener noreferrer">
+  Visitar o site
+</a>
+
+        </div>
+      </article>
+      
+      <article class="proj">
+        <a class="shot" href="https://ogcriativo.com.br" aria-label="Visit OG Criativo website">
+          <img src="/imagens/og-print.jpeg" alt="OG Criativo website" loading="lazy">
+        </a>
+
+<div class="info">
+
+<h3>OG Criativo</h3>
+
+<p>
+  Desenvolvimento de um site para uma loja de produtos
+  personalizados, com foco na apresentação do catálogo
+  e na geração de contatos e pedidos pelo WhatsApp.
+</p>
+
+<p><strong>O que foi desenvolvido:</strong></p>
+
+<ul>
+  <li>Catálogo digital de produtos personalizados.</li>
+  <li>Organização por categorias de produtos.</li>
+  <li>Apresentação de canecas, copos térmicos, camisetas e kits.</li>
+  <li>Navegação adaptada para diferentes dispositivos.</li>
+  <li>Integração com WhatsApp para facilitar o atendimento.</li>
+</ul>
+
+<p><strong>Resultado:</strong> uma vitrine digital própria para
+apresentar os produtos da loja e facilitar o contato com
+clientes interessados.</p>
+
+<div class="tags">
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+  <span>Catálogo digital</span>
+  <span>WhatsApp</span>
+</div>
+
+<a class="link"
+   href="https://www.ogcriativo.com.br/"
+   target="_blank"
+   rel="noopener noreferrer">
+  Visitar o site
+</a>
+
+</div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Quem usa, recomenda</h2>
+    <p class="lead">O que a Jéssica diz sobre o site da confeitaria.</p>
+    <blockquote class="depo" style="margin:0">
+      <p>“O site faz uma diferença enorme no dia a dia da confeitaria. Além de facilitar o atendimento, ele funciona como uma vitrine disponível 24 horas, onde os clientes podem conhecer nossos produtos, consultar informações e também saber um pouco mais sobre a nossa história e o nosso trabalho.</p>
+      <p>E não é apenas uma questão de apresentação: já recebemos encomendas de pessoas de outras cidades, inclusive de clientes de São Paulo. Isso mostra que o site amplia nossas possibilidades de alcançar novos públicos e conquistar clientes que talvez nunca conheceriam a confeitaria de outra forma.</p>
+      <p>É um investimento que fortalece a presença da marca na internet, transmite mais profissionalismo e pode abrir portas para novas oportunidades de negócio.”</p>
+      <cite>Jéssica Tozzi, Jéssica Tozzi Confeitaria</cite>
+    </blockquote>
+  </div>
+</section>
+
+
+<section id="processo">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+
+    <p class="lead">
+      Um processo simples e transparente, do primeiro contato
+      à publicação do seu site.
+    </p>
+
+    <ol class="steps">
+      <li>
+        <strong>Primeiro contato</strong>
+        <span>
+          Você me conta sobre seu negócio, seus objetivos
+          e o que precisa apresentar na internet.
+        </span>
+      </li>
+
+      <li>
+        <strong>Planejamento e orçamento</strong>
+        <span>
+          Analiso suas necessidades, defino a proposta
+          e apresento o orçamento para sua aprovação.
+        </span>
+      </li>
+
+      <li>
+        <strong>Desenvolvimento</strong>
+        <span>
+          Desenvolvo o site de acordo com o projeto,
+          utilizando suas informações, fotos e identidade visual.
+          Você acompanha e aprova antes da publicação.
+        </span>
+      </li>
+
+      <li>
+        <strong>Entrega e publicação</strong>
+        <span>
+          Após a aprovação, finalizo e publico o site.
+          Você recebe as orientações necessárias para utilizá-lo.
+        </span>
+      </li>
+
+      <li>
+        <strong>Suporte opcional</strong>
+        <span>
+          Se desejar, você pode contratar serviços adicionais
+          de hospedagem, domínio, manutenção e atualizações.
+        </span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+
+<section id="servicos">
+  <div class="wrap">
+    <h2>Serviços</h2>
+
+    <p class="lead">
+      Soluções digitais para apresentar seu negócio,
+      conquistar clientes e fortalecer sua presença na internet.
+    </p>
+
+    <div class="offer">
+      <div>
+        <h3>Criação de sites</h3>
+
+        <p>
+          Desenvolvo sites personalizados de acordo com
+          as necessidades de cada negócio.
+        </p>
+
+        <ul>
+          <li>Sites institucionais e páginas de divulgação</li>
+          <li>Catálogos digitais de produtos</li>
+          <li>Integração com WhatsApp e redes sociais</li>
+          <li>Layout adaptado para celulares e computadores</li>
+          <li>Publicação do site após aprovação</li>
+        </ul>
+
+        <p><strong>Orçamento personalizado conforme o projeto.</strong></p>
+      </div>
+
+      <div>
+        <h3>Serviços adicionais</h3>
+
+        <p>
+          Você também pode contar comigo para manter
+          seu site publicado e atualizado.
+        </p>
+
+        <ul>
+          <li>Auxílio na contratação e configuração de domínio</li>
+          <li>Configuração de hospedagem</li>
+          <li>Pequenas atualizações de textos e imagens</li>
+          <li>Suporte e manutenção mensal</li>
+        </ul>
+
+        <p><strong>Serviços opcionais, contratados separadamente.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <h2>Vamos conversar sobre o seu projeto?</h2>
+
+    <p class="lead">
+      Está pensando em criar um site para seu negócio?
+      Me conte um pouco sobre sua ideia e vamos encontrar
+      a melhor solução para você.
+    </p>
+
+    <p>
+      Para começar, você pode me informar o nome do seu negócio,
+      qual é o seu segmento e o que gostaria de apresentar na internet.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/5535992044119?text=Ol%C3%A1%2C%20Bruno!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20um%20site%20para%20meu%20neg%C3%B3cio."
+       target="_blank"
+       rel="noopener">
+      Solicitar orçamento pelo WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-content">
+    <span>Bruno Daniel de Mattos</span>
+    <span>Cambuí, Minas Gerais</span>
+    <a href="tel:+5535992044119">(35) 99204-4119</a>
+    <a href="https://www.instagram.com/ogcriativodigital/"
+       target="_blank"
+       rel="noopener">@ogcriativodigital</a>
+  </div>
+</footer>
+</body>
+</html>
