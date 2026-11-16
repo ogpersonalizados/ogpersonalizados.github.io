@@ -800,15 +800,16 @@ function calcularResultado() {
        BUSCAR CANECAS DO PERFIL PRINCIPAL
     ============================================= */
 
-    let candidatas =
-        canecas.filter(caneca => {
+let candidatas =
+    canecas.filter(caneca => {
 
-            return (
-                caneca.principal ===
-                principal.chave
-            );
+        return (
+            caneca.id >= 19 &&
+            caneca.principal ===
+            principal.chave
+        );
 
-        });
+    });
 
 
     /* =============================================
@@ -816,12 +817,12 @@ function calcularResultado() {
        CASO NÃO EXISTAM CANECAS PARA O PERFIL
     ============================================= */
 
-    if (candidatas.length === 0) {
+if (candidatas.length === 0) {
 
-        candidatas =
-            [...canecas];
+    candidatas =
+        canecas.filter(caneca => caneca.id >= 19);
 
-    }
+}
 
 
     /* =============================================
