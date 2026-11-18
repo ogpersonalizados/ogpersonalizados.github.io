@@ -394,3 +394,94 @@ if (bannerSlides.length > 0) {
 
 }
 
+
+/* ===== PRELOADER OG CRIATIVO ===== */
+
+(function () {
+    function iniciarPreloaderOG() {
+        const preloader = document.getElementById("og-preloader");
+        const percentual = document.getElementById("og-preloader-percentual");
+        const preenchimento = document.getElementById("og-preloader-preenchimento");
+
+        if (!preloader || !percentual || !preenchimento) {
+            return;
+        }
+
+        const inicio = performance.now();
+        const duracao = 3500;
+        const tempoMaximo = 8000;
+
+        let carregamentoConcluido = document.readyState === "complete";
+        let animacaoConcluida = false;
+        let finalizado = false;
+
+        const overflowAnterior = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        function atualizarProgresso(valor) {
+            const progresso = Math.min(100, Math.max(0, Math.round(valor)));
+
+            percentual.textContent = progresso + "%";
+            preenchimento.style.width = progresso + "%";
+        }
+
+        function finalizarPreloader() {
+            if (finalizado || !carregamentoConcluido || !animacaoConcluida) {
+                return;
+            }
+
+            finalizado = true;
+            atualizarProgresso(100);
+
+            preloader.style.transition = "opacity 0.8s ease";
+            preloader.style.opacity = "0";
+            preloader.style.pointerEvents = "none";
+
+            setTimeout(function () {
+                preloader.remove();
+                document.body.style.overflow = overflowAnterior;
+            }, 850);
+        }
+
+        function animarProgresso(agora) {
+            if (finalizado) return;
+
+            const decorrido = agora - inicio;
+            const progresso = Math.min(90, (decorrido / duracao) * 90);
+
+            atualizarProgresso(progresso);
+
+            if (decorrido < duracao) {
+                requestAnimationFrame(animarProgresso);
+            } else {
+                animacaoConcluida = true;
+                finalizarPreloader();
+            }
+        }
+
+        if (!carregamentoConcluido) {
+            window.addEventListener("load", function () {
+                carregamentoConcluido = true;
+                finalizarPreloader();
+            }, { once: true });
+        }
+
+        setTimeout(function () {
+            carregamentoConcluido = true;
+            animacaoConcluida = true;
+            finalizarPreloader();
+        }, tempoMaximo);
+
+        requestAnimationFrame(animarProgresso);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", iniciarPreloaderOG);
+    } else {
+        iniciarPreloaderOG();
+    }
+})();
+
+/* ===== FIM PRELOADER OG CRIATIVO ===== */
+
+
