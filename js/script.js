@@ -433,14 +433,22 @@ if (bannerSlides.length > 0) {
             finalizado = true;
             atualizarProgresso(100);
 
-            preloader.style.transition = "opacity 0.8s ease";
-            preloader.style.opacity = "0";
-            preloader.style.pointerEvents = "none";
 
-            setTimeout(function () {
-                preloader.remove();
-                document.body.style.overflow = overflowAnterior;
-            }, 850);
+// Aciona as faixas douradas
+document.querySelectorAll(".og-saida-dourada").forEach(function (faixa) {
+    faixa.classList.add("og-ativa");
+});
+
+// Faz o preloader subir
+preloader.style.transition = "transform 1.2s cubic-bezier(0.77, 0, 0.175, 1)";
+preloader.style.transform = "translateY(-100%)";
+preloader.style.pointerEvents = "none";
+
+
+setTimeout(function () {
+    preloader.remove();
+    document.body.style.overflow = overflowAnterior;
+}, 1250);
         }
 
         function animarProgresso(agora) {
