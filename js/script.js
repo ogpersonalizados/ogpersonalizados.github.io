@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function(){
      INICIAR AUTOPLAY
   ====================================================== */
   function startCarousel(){
-    autoPlay = setInterval(nextSlide, 5000);
+    autoPlay = setInterval(nextSlide, 7000);
   }
 
 
