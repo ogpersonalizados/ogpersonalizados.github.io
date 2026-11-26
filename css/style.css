@@ -691,7 +691,7 @@ footer{
   }
 
   .carousel-indicators{
-  bottom:-20px;
+  bottom:-45px;
 }
 
   .slide img{
@@ -775,6 +775,9 @@ footer{
   animation: pulsePais 2s infinite;
   margin-top: 400px;
   margin-left: 0%;
+  font-size: 13px;
+padding: 10px 12px;
+white-space: nowrap;
 }
 
 @keyframes pulsePais {
